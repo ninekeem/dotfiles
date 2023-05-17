@@ -3,7 +3,7 @@
 *log*
 *pid*
 *state*
-*sock*
+nvim/lazy-lock.json
 
 QtProject.conf
 dconf

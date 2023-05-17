@@ -23,3 +23,6 @@ require('lspconfig').gopls.setup{}
 require('lspconfig').pyright.setup{}
 require("config.nvim")
 require("config.nvim-cmp")
+
+-- other
+require("gitsigns").setup()
