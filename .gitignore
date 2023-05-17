@@ -1,5 +1,6 @@
-**
-!.gitignore
+*/
+*.*
+
 !fish
 !foot
 !htop
