@@ -1,0 +1,12 @@
+bindsym --to-code {
+		XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
+		XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
+
+		XF86Tools exec mpc single
+		XF86AudioPlay exec mpc toggle
+		XF86AudioPrev exec mpc prev
+		XF86AudioNext exec mpc next
+		XF86Calculator exec notify-send "$(mpc current)"
+		$mod+i exec mpc volume -1
+		$mod+o exec mpc volume +1
+}

@@ -1,11 +1,12 @@
-*/
-*.*
+**/database
+**/log
+**/state
 
-!fish
-!foot
-!htop
-!mpd
-!neofetch
-!nvim
-!pipewire
-!sway
+QtProject.conf
+dconf
+dlv
+mimeapps.list
+ncmpcpp
+pulse
+qimvg
+systemd
