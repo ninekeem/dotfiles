@@ -1,8 +1,9 @@
-**/database
-**/log
-**/pid
-**/state
-**/sock*
+**/*.db*
+**/*database*
+**/*log*
+**/*pid*
+**/*state*
+**/*sock*
 
 QtProject.conf
 dconf
