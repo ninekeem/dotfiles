@@ -1,4 +1,3 @@
--- require("config.nvim")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -21,6 +20,17 @@ require("lazy").setup("plugins")
 -- lsp
 require('lspconfig').gopls.setup{}
 require('lspconfig').pyright.setup{}
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'sh',
+  callback = function()
+    vim.lsp.start({
+      name = 'bash-language-server',
+      cmd = { 'bash-language-server', 'start' },
+    })
+  end,
+})
+
 require("config.nvim")
 require("config.nvim-cmp")
 
