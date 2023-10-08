@@ -1,7 +1,7 @@
 {
-  "jedi-vim": { "branch": "master", "commit": "42c2af1812bc12831a2904811835082904c3cc1e" },
-  "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
-  "neoconf.nvim": { "branch": "main", "commit": "6aaeb48336b369d7ed8ef243bfd0d76ec79362cd" },
-  "neodev.nvim": { "branch": "main", "commit": "864b35006d3de24c60e44b566de8018f919b13e6" },
-  "which-key.nvim": { "branch": "main", "commit": "4b73390eec680b4c061ea175eb32c0ff3412271d" }
+  "jedi-vim": { "branch": "master", "commit": "338af171ea32bb9d4705429d3aef20735d567c87" },
+  "lazy.nvim": { "branch": "main", "commit": "9102d051a8e27298f4c913e3017ac44f151ae820" },
+  "neoconf.nvim": { "branch": "main", "commit": "40463008ef02872db77f5a59042d8d25e85baf68" },
+  "neodev.nvim": { "branch": "main", "commit": "f8592cc143a5512b98a2c3683aa43c73f98e34f7" },
+  "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
 }
