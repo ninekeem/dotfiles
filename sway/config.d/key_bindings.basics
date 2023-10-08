@@ -1,8 +1,0 @@
-bindsym --to-code {
-	$mod+Return exec $term
-	$mod+Shift+q kill
-	$mod+x exec $menu
-	$mod+Shift+r reload
-	$mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-}
-floating_modifier $mod normal
