@@ -1,4 +1,0 @@
-bindsym {
-	Ctrl+1 exec makoctl dismiss
-	Ctrl+2 exec makoctl dismiss --all
-}
