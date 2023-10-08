@@ -2,6 +2,9 @@
 !fish
 !foot
 !mpd
+mpd/database
+mpd/log
+mod/state
 !mpv
 !pipewire
 !qimgv
