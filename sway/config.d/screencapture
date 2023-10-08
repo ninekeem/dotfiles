@@ -1,0 +1,12 @@
+set $ps1 Print
+set $ps2 Shift+Print
+set $ps3 Alt+Print
+set $ps4 Alt+Control+Print
+
+bindsym --to-code {
+	$ps1 exec grimshot copy output
+	$ps2 exec grimshot copy area
+	$ps3 exec grimshot copy active
+	$ps4 exec grimshot copy screen
+    Ctrl+Print exec grimshot save output
+}

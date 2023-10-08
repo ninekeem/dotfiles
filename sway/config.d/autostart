@@ -1,0 +1,5 @@
+exec {
+		gentoo-pipewire-launcher
+		mako
+		udiskie
+}

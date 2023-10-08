@@ -1,0 +1,14 @@
+input "type:keyboard" {
+  repeat_delay 224
+  repeat_rate 32
+  xkb_layout us,ru
+  xkb_options grp:caps_toggle,compose:ralt
+  xkb_numlock enabled
+}
+
+input "type:pointer" {
+  accel_profile adaptive
+  left_handed disabled
+  pointer_accel -0.33
+  scroll_factor 1
+}

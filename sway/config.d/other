@@ -1,0 +1,3 @@
+bindsym --to-code {
+    $mod+p exec swaylock -f -c 000000
+}
