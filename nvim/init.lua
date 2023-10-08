@@ -25,4 +25,22 @@ require("lazy").setup({
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
   "davidhalter/jedi-vim",
+  "bash-lsp/bash-language-server",
+  "lewis6991/gitsigns.nvim",
+  "terrortylor/nvim-comment",
+  "nvim-tree/nvim-tree.lua"
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'sh',
+  callback = function()
+    vim.lsp.start({
+      name = 'bash-language-server',
+      cmd = { 'bash-language-server', 'start' },
+    })
+  end,
+})
+
+require('gitsigns').setup()
+require('nvim_comment').setup()
+require('nvim-tree').setup()
