@@ -4,6 +4,7 @@
 !mpd
 mpd/database
 mpd/log
+mpd/pid
 mod/state
 !mpv
 !pipewire
