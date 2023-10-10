@@ -1,5 +1,6 @@
-ignore-empty-password
-show-keyboard-layout
-indicator-caps-lock
-font=terminus
+color=000000
 font-size=12
+font=terminus
+ignore-empty-password
+indicator-caps-lock
+show-keyboard-layout
