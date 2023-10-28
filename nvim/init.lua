@@ -10,10 +10,12 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
-vim.opt.rtp:prepend(lazypath)
+vim.opt.expandtab = false
 vim.opt.number = true
-vim.opt.tabstop = 4
+vim.opt.rtp:prepend(lazypath)
+vim.opt.shiftwidth = 4
 vim.opt.swapfile = false
+vim.opt.tabstop = 4
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.opt.clipboard = "unnamedplus"
 
