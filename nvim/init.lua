@@ -21,4 +21,6 @@ require('gitsigns').setup()
 require('nvim_comment').setup()
 require('nvim-tree').setup()
 require('nvim-treesitter').setup()
--- require('lspconfig').gopls.setup()
+require('lspconfig').gopls.setup({
+	on_attach = on_attach
+})
