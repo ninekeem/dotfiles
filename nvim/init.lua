@@ -19,6 +19,7 @@ require('lazy').setup('plugins')
 -- setups
 require('gitsigns').setup()
 require('nvim_comment').setup()
+require('cmp').setup()
 require('nvim-tree').setup()
 require('nvim-treesitter').setup()
 require('lspconfig').gopls.setup({
