@@ -15,9 +15,9 @@ input "type:pointer" {
 
 input "type:touchpad" {
 	accel_profile adaptive
-	dwt disabled
+	dwt enabled
 	left_handed disabled
-	natural_scroll enabled
+	natural_scroll disabled
 	pointer_accel -0.33
 	tap enabled
 }
