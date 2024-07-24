@@ -1,6 +1,7 @@
 return {
-		require('nvim-treesitter.configs').setup {
-		-- ensure_installed = { "c", "Dockerfile", "go", "gomod", "lua", "vim", "vimdoc", "query" },
+	require('nvim-treesitter.configs').setup
+	{
 		auto_install = false,
+		auto_update = true,
 	}
 }

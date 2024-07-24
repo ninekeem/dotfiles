@@ -20,6 +20,11 @@ require('lazy').setup('plugins')
 
 -- setups
 require('gitsigns').setup()
+require('nvim-tree').setup()
+require('nvim-web-devicons').setup()
+require('nvim-dap-virtual-text').setup()
+require('yaml-companion').open_ui_select()
+-- require('yaml-companion').setup()
 
 -- lsp
 require('lsp')

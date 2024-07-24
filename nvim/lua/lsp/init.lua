@@ -74,6 +74,9 @@
   -- require('lspconfig')['pyright'].setup {
   --   capabilities = capabilities
   -- }
+  --
   require('lspconfig')['gopls'].setup {}
   require('lspconfig')['pyright'].setup {}
+  -- require('lspconfig')['yamlls'].setup {}
+  require('lsp.yaml')
   require('lsp.bash')
