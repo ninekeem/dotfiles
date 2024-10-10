@@ -4,4 +4,5 @@ return {
 	"nvim-tree/nvim-web-devicons",
 	"terrortylor/nvim-comment",
 	"VonHeikemen/lsp-zero.nvim",
+    "williamboman/mason.nvim"
 }

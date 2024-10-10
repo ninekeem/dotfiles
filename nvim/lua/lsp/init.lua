@@ -77,6 +77,5 @@
   --
   require('lspconfig')['gopls'].setup {}
   require('lspconfig')['pyright'].setup {}
-  -- require('lspconfig')['yamlls'].setup {}
   require('lsp.yaml')
   require('lsp.bash')
