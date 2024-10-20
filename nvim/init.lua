@@ -23,9 +23,6 @@ require('gitsigns').setup()
 require('nvim-tree').setup()
 require('nvim-web-devicons').setup()
 require('nvim-dap-virtual-text').setup()
-require('yaml-companion').open_ui_select()
-require('mason').setup()
-require('mason-lspconfig').setup()
 
--- lsp
-require('lsp')
+-- install all lsp, dap, linters etc. and run cmp
+require('ncmp')

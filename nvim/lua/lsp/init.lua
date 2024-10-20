@@ -1,81 +1,40 @@
-  -- Set up nvim-cmp.
-  local cmp = require'cmp'
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-  cmp.setup({
-    snippet = {
-      -- REQUIRED - you must specify a snippet engine
-      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-        -- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
-      end,
-    },
-    window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
-    },
-    mapping = cmp.mapping.preset.insert({
-      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    }),
-    sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
-    }, {
-      { name = 'buffer' },
-    })
-  })
+local servers = {
+	"ansiblels",
+	"bashls",
+	"docker_compose_language_service",
+	"dockerls",
+	-- "flux_lsp", i will use it in future
+	"gopls",
+	"helm_ls",
+	"jsonls",
+	"lua_ls",
+	"pyright",
+	"sqlls",
+	"yamlls",
+}
 
-  -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
-  -- Set configuration for specific filetype.
-  --[[ cmp.setup.filetype('gitcommit', {
-    sources = cmp.config.sources({
-      { name = 'git' },
-    }, {
-      { name = 'buffer' },
-    })
- })
- require("cmp_git").setup() ]]-- 
+require('mason').setup()
+require('mason-lspconfig').setup {
+	ensure_installed = servers
+}
 
-  -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline({ '/', '?' }, {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-      { name = 'buffer' }
-    }
-  })
+local lp = require('lspconfig')
 
-  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-      { name = 'path' }
-    }, {
-      { name = 'cmdline' }
-    }),
-    matching = { disallow_symbol_nonprefix_matching = false }
-  })
+lp.ansiblels.setup{}
+lp.bashls.setup{}
+lp.docker_compose_language_service.setup{}
+lp.dockerls.setup{}
+lp.gopls.setup{}
+lp.helm_ls.setup{}
+lp.jsonls.setup{}
+lp.lua_ls.setup{}
+lp.pyright.setup{}
+lp.sqlls.setup{}
 
-  -- Set up lspconfig.
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  -- require('lspconfig')['gopls'].setup {
-  --   capabilities = capabilities
-  -- }
-  --
-  -- require('lspconfig')['pyright'].setup {
-  --   capabilities = capabilities
-  -- }
-  --
-  require('lspconfig')['gopls'].setup {}
-  require('lspconfig')['pyright'].setup {}
-  require('lsp.yaml')
-  require('lsp.bash')
+-- TODO: get schemas from https://github.com/yannh/kubernetes-json-schema
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#yamlls
+--
+-- TODO: setup ansiblels
+lp.yamlls.setup{}

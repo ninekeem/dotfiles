@@ -1,8 +1,8 @@
 return {
 	"nvim-telescope/telescope.nvim",
     dependencies =
-		{
-			'nvim-lua/plenary.nvim',
-			'BurntSushi/ripgrep',
-		}
-    }
+	{
+		'nvim-lua/plenary.nvim',
+		'BurntSushi/ripgrep',
+	}
+}

@@ -3,6 +3,5 @@ return {
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
 	"terrortylor/nvim-comment",
-	"VonHeikemen/lsp-zero.nvim",
-    "williamboman/mason.nvim"
+	"williamboman/mason.nvim"
 }
