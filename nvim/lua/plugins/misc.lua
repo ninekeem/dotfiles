@@ -3,5 +3,6 @@ return {
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
 	"terrortylor/nvim-comment",
-	"williamboman/mason.nvim"
+	"williamboman/mason.nvim",
+	"mfussenegger/nvim-lint",
 }

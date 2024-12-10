@@ -1,8 +1,12 @@
 Qt*
-go
 dconf
+feroxbuster
+go
+helm
 mimeapps.list
-pulse
 monero-project
+pulse
+strawberry
+subfinder
 supersonic
 systemd
