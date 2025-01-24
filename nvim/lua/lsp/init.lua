@@ -12,6 +12,7 @@ local servers = {
 	"lua_ls",
 	"nginx_language_server",
 	"pyright",
+	-- "sqls",
 	"sqlls",
 	"yamlls",
 }
@@ -28,11 +29,25 @@ lp.bashls.setup{}
 lp.docker_compose_language_service.setup{}
 lp.dockerls.setup{}
 lp.gopls.setup{}
-lp.helm_ls.setup{}
+lp.helm_ls.setup{
+	filetypes = { 'helm' },
+	settings = {
+		['helm-ls'] = {
+			yamlls = {
+				path = "yaml-language-server",
+			}
+		}
+	}
+}
 lp.jsonls.setup{}
 lp.lua_ls.setup{}
 lp.pyright.setup{}
-lp.sqlls.setup{}
+lp.sqlls.setup{
+  filetypes = { 'sql' },
+  root_dir = function(_)
+    return vim.loop.cwd()
+  end,
+}
 
 -- TODO: get schemas from https://github.com/yannh/kubernetes-json-schema
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#yamlls
@@ -49,7 +64,7 @@ lp.yamlls.setup{
 				["https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/inventory.json"] = "ansible*/**/inv*/**",
 				["https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/playbook"] = "ansible*/**/playbooks*/**",
 				["https://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
-				["https://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+				["https://json.schemastore.org/chart"] = "k8s.yaml/**/Chart/**",
 				-- ["https://json.schemastore.org/gitlab-ci"] = "*gitlab-ci*.{yml,yaml}",
 				-- ["https://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
 				-- ["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
